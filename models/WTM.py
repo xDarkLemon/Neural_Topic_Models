@@ -85,7 +85,7 @@ class WTM:
 
                 trainloss_lst.append(loss.item()/len(bows))
                 epochloss_lst.append(loss.item()/len(bows))
-                if (iter+1) % 10 == 0:
+                if (iter+1) % 100 == 0:
                     print(f'Epoch {(epoch+1):>3d}\tIter {(iter+1):>4d}\tLoss:{loss.item()/len(bows):<.7f}\tRec Loss:{rec_loss.item()/len(bows):<.7f}\tMMD:{mmd.item()/len(bows):<.7f}')
             #scheduler.step()
             if (epoch+1) % log_every == 0:
